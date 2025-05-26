@@ -14,6 +14,7 @@ This is a simple scientific calculator implemented in Python.
 *   Sine
 *   Cosine
 *   Tangent
+*   Factorial
 
 ## Usage
 
@@ -58,6 +59,14 @@ class ScientificCalculator:
 
     def tangent(self, x):
         return math.tan(x)
+    
+    def factorial(self, n):
+        if n == 0:
+            return 1
+        elif n < 0:
+            return "Cannot calculate factorial of a negative number"
+        else:
+            return math.factorial(n)
 
 # Example usage:
 calculator = ScientificCalculator()
@@ -72,3 +81,4 @@ print("Logarithm: ", calculator.logarithm(10))
 print("Sine: ", calculator.sine(0))
 print("Cosine: ", calculator.cosine(0))
 print("Tangent: ", calculator.tangent(0))
+print("Factorial: ", calculator.factorial(5))
